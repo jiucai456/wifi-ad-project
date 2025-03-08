@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>观看广告</title>
+    <style>
+        #countdown {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <!-- Adsterra Popunder https://www.effectiveratecpm.com/v3swm95jh0?key=41bb9fbfa67c4b66cccec7951ff8404c -->
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'https://www.effectiveratecpm.com/v3swm95jh0?key=41bb9fbfa67c4b66cccec7951ff8404c',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+        };
+        document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/https://www.effectiveratecpm.com/v3swm95jh0?key=41bb9fbfa67c4b66cccec7951ff8404c/invoke.js"></scr' + 'ipt>');
+    </script>
+</head>
+<body>
+    <h1>请观看广告</h1>
+    <div id="countdown">剩余时间: 10秒</div>
+
+    <script>
+        // 倒计时
+        let timeLeft = 10; // 广告时长
+        const countdownElement = document.getElementById('countdown');
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = `剩余时间: ${timeLeft}秒`;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                window.location.href = "wifi.html"; // 重定向到WiFi连接页面
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
